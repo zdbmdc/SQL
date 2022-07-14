@@ -1,0 +1,25 @@
+CREATE TABLE radio_junky (id INTEGER PRIMARY KEY, name TEXT, number_of_bands INTEGER, modes TEXT, hf_vhf TEXT, mobile_ht_desk TEXT, price INTEGER);
+
+INSERT into radio_junky VALUES (1, "kendwood NX-P", 1, "FM", "VHF", "HT", 230);
+INSERT INTO radio_junky VALUES (2, "Powerwerx750", 2, "FM", "VHF", "MOBILE", 350);
+INSERT INTO radio_junky VALUES (3, "Elton_Elite", 4, "am ssb", "hf", "desk", 600);
+INSERT INTO radio_junky VALUES (4, "PRESIDENT 10", 1, "am fm usb lsb", "hf", "mobile", 300);
+INSERT INTO radio_junky VALUES (5, "TH-9800", 4, "am fm", "vhf uhf", "mobile", 220);
+INSERT INTO radio_junky VALUES (6, "FT-243", 1, "ssb", "hf", "desk", 20);
+INSERT INTO radio_junky VALUES (7, "ICOM IC-7610", 1, "FM", "uhf", "mobile", 5800);
+INSERT INTO radio_junky VALUES (8, "Ranger RCI-69", 4, "am usb lsb", "hf", "desk", 750);
+INSERT INTO radio_junky VALUES (9, "Hammacher", 3, "am fm", "vhf", "mobile", 140);
+INSERT INTO radio_junky VALUES (10, "Hammacher", 2, "am fm", "lw", "desk", 210);
+INSERT INTO radio_junky VALUES (11, "ICOM-718", 4, "am ssb", "hf", "desk", 710);
+INSERT INTO radio_junky VALUES (12, "ICOM IC-7851", 4, "ssb", "hf", "desk", 18000);
+INSERT INTO radio_junky VALUES (13, "ICOM IC-7610", 5, "am ssb", "hf", "desk", 5900);
+INSERT INTO radio_junky VALUES (14, "BAOFENG UV-5R", 2, "fm", "vhf uhf", "ht", 40);
+INSERT INTO radio_junky VALUES (15, "Yeau VX-6R", 3, "fm", "vhf uhf", "ht", 250);
+
+SELECT * FROM radio_junky WHERE modes = "fm" ORDER BY price;
+ 
+SELECT * FROM radio_junky WHERE number_of_bands > 1 ORDER BY price LIMIT 5;
+
+SELECT  name AS "Radio", number_of_bands   FROM radio_junky ORDER BY price  DESC;
+
+
